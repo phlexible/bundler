@@ -9,18 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Phlexible\Component\Bundler\Tests\MappedContent;
+namespace Phlexible\Component\Bundler\Tests\Content;
 
 use Phlexible\Component\Bundler\Content\MappedContent;
 
 /**
- * @covers \Phlexible\Component\Bundler\MappedContent\MappedContent
+ * @covers \Phlexible\Component\Bundler\Content\MappedContent
  */
 class MappedContentTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @return string
-     */
     public function testMappedContent()
     {
         $mappedContent = new MappedContent('foo', 'bar');

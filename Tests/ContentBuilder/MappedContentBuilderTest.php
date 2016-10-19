@@ -9,16 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Phlexible\Component\Bundler\Tests\MappedContent;
+namespace Phlexible\Component\Bundler\Tests\ContentBuilder;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Content\MappedContent;
+use Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\SourceMap\SourceMap;
 use Puli\Repository\Resource\FileResource;
 
 /**
- * @covers \Phlexible\Component\Bundler\MappedContent\MappedContentBuilder
+ * @covers \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder
  */
 class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
 {
@@ -27,7 +28,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $root = vfsStream::setup();
         $jsFile = vfsStream::newFile('js/file.js')->at($root)->setContent('console.log(123);');
 
-        $builder = new \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder();
+        $builder = new MappedContentBuilder();
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
@@ -50,7 +51,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $root = vfsStream::setup();
         $jsFile = vfsStream::newFile('js/file.js')->at($root)->setContent('console.log(123);');
 
-        $builder = new \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder();
+        $builder = new MappedContentBuilder();
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
@@ -61,7 +62,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
             }
         );
 
-        $expected = new \Phlexible\Component\Bundler\Content\MappedContent(
+        $expected = new MappedContent(
             'console.log(123);'.PHP_EOL,
             (new SourceMap(
                 'test', '', array('sanitizedPath'), array($jsFile->getContent().PHP_EOL), array(), 'AAAA;'
@@ -76,7 +77,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $root = vfsStream::setup();
         $jsFile = vfsStream::newFile('js/file.js')->at($root)->setContent('console.log(123);');
 
-        $builder = new \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder();
+        $builder = new MappedContentBuilder();
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
@@ -103,7 +104,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $root = vfsStream::setup();
         $jsFile = vfsStream::newFile('js/file.js')->at($root)->setContent('console.log(123);');
 
-        $builder = new \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder();
+        $builder = new MappedContentBuilder();
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
