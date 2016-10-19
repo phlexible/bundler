@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\SourceMap;
 
 /**
- * Source map index
+ * Source map index.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -67,7 +67,7 @@ class SourceMapIndex
         $mappings = array();
 
         $lines = substr_count(rtrim($this->content, PHP_EOL).PHP_EOL, PHP_EOL);
-        for ($i = 0; $i < $lines; $i++) {
+        for ($i = 0; $i < $lines; ++$i) {
             $mappings[] = new Mapping($destLine + $i, 0, $index, $i, 0);
         }
 

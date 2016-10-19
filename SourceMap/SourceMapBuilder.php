@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\SourceMap;
 
 /**
- * Source map builder
+ * Source map builder.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -60,7 +60,9 @@ class SourceMapBuilder
      */
     private function createSources()
     {
-        return array_map(function(SourceMapIndex $index) {return $index->getSource();}, $this->indexes);
+        return array_map(function (SourceMapIndex $index) {
+            return $index->getSource();
+        }, $this->indexes);
     }
 
     /**
@@ -68,7 +70,9 @@ class SourceMapBuilder
      */
     private function createContents()
     {
-        return array_map(function(SourceMapIndex $index) {return $index->getContent();}, $this->indexes);
+        return array_map(function (SourceMapIndex $index) {
+            return $index->getContent();
+        }, $this->indexes);
     }
 
     /**

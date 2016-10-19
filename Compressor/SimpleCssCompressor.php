@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Compressor;
 
 /**
- * Simple CSS compressor
+ * Simple CSS compressor.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -24,10 +24,10 @@ class SimpleCssCompressor extends AbstractStringCompressor
     public function compressString($buffer)
     {
         $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
-        $buffer = str_replace(["\r\n","\r","\n","\t",'  ','    ','     '], '', $buffer);
-        $buffer = preg_replace(['(( )+{)','({( )+)'], '{', $buffer);
-        $buffer = preg_replace(['(( )+})','(}( )+)','(;( )*})'], '}', $buffer);
-        $buffer = preg_replace(['(;( )+)','(( )+;)'], ';', $buffer);
+        $buffer = str_replace(["\r\n", "\r", "\n", "\t", '  ', '    ', '     '], '', $buffer);
+        $buffer = preg_replace(['(( )+{)', '({( )+)'], '{', $buffer);
+        $buffer = preg_replace(['(( )+})', '(}( )+)', '(;( )*})'], '}', $buffer);
+        $buffer = preg_replace(['(;( )+)', '(( )+;)'], ';', $buffer);
 
         return $buffer;
     }

@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\SourceMap;
 
 /**
- * Source map
+ * Source map.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */
@@ -91,13 +91,13 @@ class SourceMap
     public function toJson()
     {
         return json_encode(array(
-            "version" => $this->version,
-            "file" => $this->file,
-            "sourceRoot" => $this->sourceRoot,
-            "sources" => $this->sources,
-            "sourcesContent" => $this->sourcesContent,
-            "names" => $this->names,
-            "mappings" => $this->mappings
+            'version' => $this->version,
+            'file' => $this->file,
+            'sourceRoot' => $this->sourceRoot,
+            'sources' => $this->sources,
+            'sourcesContent' => $this->sourcesContent,
+            'names' => $this->names,
+            'mappings' => $this->mappings,
         ));
     }
 }

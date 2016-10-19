@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Filter;
 
 /**
- * Filter phlexible baseurl and basepath
+ * Filter phlexible baseurl and basepath.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -38,11 +38,11 @@ class BaseUrlContentFilter implements ContentFilterInterface
         $this->basePath = '/';
 
         if ($baseUrl && $baseUrl !== '/') {
-            $this->baseUrl = '/' . trim($baseUrl, '/') . '/';
+            $this->baseUrl = '/'.trim($baseUrl, '/').'/';
         }
 
         if ($basePath && $basePath !== '/') {
-            $this->basePath = '/' . trim($basePath, '/') . '/';
+            $this->basePath = '/'.trim($basePath, '/').'/';
         }
     }
 
@@ -53,7 +53,7 @@ class BaseUrlContentFilter implements ContentFilterInterface
     {
         return str_replace(
             ['/BASE_PATH/', '/BASE_URL/', '/BUNDLES_PATH/'],
-            [$this->basePath, $this->baseUrl, $this->basePath . 'bundles/'],
+            [$this->basePath, $this->baseUrl, $this->basePath.'bundles/'],
             $content
         );
     }

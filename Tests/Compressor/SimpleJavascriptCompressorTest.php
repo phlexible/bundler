@@ -15,7 +15,7 @@ use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Compressor\SimpleJavascriptCompressor;
 
 /**
- * Simple Javascript compressor test
+ * Simple Javascript compressor test.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  *
@@ -35,7 +35,7 @@ class SimpleJavascriptCompressorTest extends \PHPUnit_Framework_TestCase
 
     private function createJs()
     {
-        return <<<EOF
+        return <<<'EOF'
 var x = {
     test: 1,
     bla: 2,
@@ -58,7 +58,7 @@ EOF;
         $js = $this->createJs();
 
         $stream = fopen('php://memory', 'r+');
-        fputs($stream, $js);
+        fwrite($stream, $js);
         rewind($stream);
 
         $compressed = stream_get_contents($this->compressor->compressStream($stream));

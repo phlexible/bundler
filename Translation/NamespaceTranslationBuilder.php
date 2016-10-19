@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\Translation;
 use Phlexible\Component\Bundler\Exception\InvalidArgumentException;
 
 /**
- * Namespace translation builder
+ * Namespace translation builder.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */
@@ -60,12 +60,12 @@ class NamespaceTranslationBuilder implements TranslationBuilderInterface
             $namespace = $parentNamespace.$this->suffix;
 
             if (!in_array($parentNamespace, $namespaces)) {
-                $content .= 'Ext.namespace("' . $parentNamespace . '");' . PHP_EOL;
+                $content .= 'Ext.namespace("'.$parentNamespace.'");'.PHP_EOL;
                 $namespaces[] = $parentNamespace;
             }
 
-            $content .= $namespace . ' = ' . json_encode($page) . ';' . PHP_EOL;
-            $content .= $namespace . '.get = function(s){return this[s]};' . PHP_EOL;
+            $content .= $namespace.' = '.json_encode($page).';'.PHP_EOL;
+            $content .= $namespace.'.get = function(s){return this[s]};'.PHP_EOL;
         }
 
         return $content;

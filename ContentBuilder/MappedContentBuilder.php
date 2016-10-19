@@ -19,7 +19,7 @@ use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\SourceMap\SourceMapBuilder;
 
 /**
- * Mapped content builder
+ * Mapped content builder.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

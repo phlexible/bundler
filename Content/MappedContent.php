@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Content;
 
 /**
- * Mapped content
+ * Mapped content.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

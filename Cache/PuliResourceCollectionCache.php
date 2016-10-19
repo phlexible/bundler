@@ -16,7 +16,7 @@ use Symfony\Component\Filesystem\Exception\IOException;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**
- * Puli resource collection cache
+ * Puli resource collection cache.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -28,7 +28,7 @@ class PuliResourceCollectionCache
     private $file;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $debug;
 

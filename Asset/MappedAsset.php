@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Asset;
 
 /**
- * Mapped asset
+ * Mapped asset.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

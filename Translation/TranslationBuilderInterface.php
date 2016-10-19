@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Translation;
 
 /**
- * Translation builder interface
+ * Translation builder interface.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */

@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Filter;
 
 /**
- * Ensure trailing separator filter
+ * Ensure trailing separator filter.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

@@ -23,7 +23,7 @@ class NamespaceTranslationBuilderTest extends \PHPUnit_Framework_TestCase
         $builder = new NamespaceTranslationBuilder();
         $result = $builder->build(array('foo' => array('bar' => 'Baz'), 'hello' => array('one' => 'World', 'two' => array('three' => 'Again'))), 'de');
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 Ext.namespace("Phlexible.foo");
 Phlexible.foo.Strings = {"bar":"Baz"};
 Phlexible.foo.Strings.get = function(s){return this[s]};

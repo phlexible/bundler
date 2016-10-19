@@ -31,14 +31,14 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
-                new FileResource($jsFile->url(), $jsFile->path())
+                new FileResource($jsFile->url(), $jsFile->path()),
             ))
         );
 
         $expected = new MappedContent(
-            'console.log(123);' . PHP_EOL,
+            'console.log(123);'.PHP_EOL,
             (new SourceMap(
-                'test', '', array($jsFile->path()), array($jsFile->getContent() . PHP_EOL), array(), 'AAAA;'
+                'test', '', array($jsFile->path()), array($jsFile->getContent().PHP_EOL), array(), 'AAAA;'
             ))->toJson()
         );
 
@@ -54,17 +54,17 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
-                new FileResource($jsFile->url(), $jsFile->path())
+                new FileResource($jsFile->url(), $jsFile->path()),
             )),
-            function() {
+            function () {
                 return 'sanitizedPath';
             }
         );
 
         $expected = new \Phlexible\Component\Bundler\Content\MappedContent(
-            'console.log(123);' . PHP_EOL,
+            'console.log(123);'.PHP_EOL,
             (new SourceMap(
-                'test', '', array('sanitizedPath'), array($jsFile->getContent() . PHP_EOL), array(), 'AAAA;'
+                'test', '', array('sanitizedPath'), array($jsFile->getContent().PHP_EOL), array(), 'AAAA;'
             ))->toJson()
         );
 
@@ -80,18 +80,18 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
-                new FileResource($jsFile->url(), $jsFile->path())
+                new FileResource($jsFile->url(), $jsFile->path()),
             )),
             null,
-            function() {
+            function () {
                 return 'PREFIX'.PHP_EOL;
             }
         );
 
         $expected = new MappedContent(
-            'PREFIX' . PHP_EOL . 'console.log(123);' . PHP_EOL,
+            'PREFIX'.PHP_EOL.'console.log(123);'.PHP_EOL,
             (new SourceMap(
-                'test', '', array($jsFile->path()), array($jsFile->getContent() . PHP_EOL), array(), ';AAAA;'
+                'test', '', array($jsFile->path()), array($jsFile->getContent().PHP_EOL), array(), ';AAAA;'
             ))->toJson()
         );
 
@@ -107,19 +107,19 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
         $result = $builder->build(
             'test',
             new ResolvedResources(array(
-                new FileResource($jsFile->url(), $jsFile->path())
+                new FileResource($jsFile->url(), $jsFile->path()),
             )),
             null,
             null,
-            function() {
+            function () {
                 return 'FILTERED'.PHP_EOL;
             }
         );
 
         $expected = new MappedContent(
-            'FILTERED' . PHP_EOL,
+            'FILTERED'.PHP_EOL,
             (new SourceMap(
-                'test', '', array($jsFile->path()), array($jsFile->getContent() . PHP_EOL), array(), 'AAAA;'
+                'test', '', array($jsFile->path()), array($jsFile->getContent().PHP_EOL), array(), 'AAAA;'
             ))->toJson()
         );
 

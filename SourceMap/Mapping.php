@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\SourceMap;
 
 /**
- * Mapping
+ * Mapping.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */
@@ -55,19 +55,19 @@ class Mapping
     public function __construct($destLine, $destCol, $srcIndex, $srcLine, $srcCol)
     {
         if (!is_int($destLine) || $destLine < 0) {
-            throw new \InvalidArgumentException("destLine has to be 0 or higher");
+            throw new \InvalidArgumentException('destLine has to be 0 or higher');
         }
         if (!is_int($destCol) || $destCol < 0) {
-            throw new \InvalidArgumentException("destCol has to be 0 or higher");
+            throw new \InvalidArgumentException('destCol has to be 0 or higher');
         }
         if (!is_int($srcIndex) || $srcIndex < 0) {
-            throw new \InvalidArgumentException("srcIndex has to be 0 or higher");
+            throw new \InvalidArgumentException('srcIndex has to be 0 or higher');
         }
         if (!is_int($srcLine) || $srcLine < 0) {
-            throw new \InvalidArgumentException("srcLine has to be 0 or higher");
+            throw new \InvalidArgumentException('srcLine has to be 0 or higher');
         }
         if (!is_int($srcCol) || $srcCol < 0) {
-            throw new \InvalidArgumentException("srcCol has to be 0 or higher");
+            throw new \InvalidArgumentException('srcCol has to be 0 or higher');
         }
 
         $this->destLine = (int) $destLine;

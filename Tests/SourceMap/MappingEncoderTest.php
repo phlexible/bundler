@@ -32,4 +32,4 @@ class MappingEncoderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame('AAAA;AACA;ACDA;', $result);
     }
-};
+}

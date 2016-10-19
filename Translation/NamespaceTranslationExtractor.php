@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\Translation;
 use Symfony\Component\Translation\MessageCatalogueInterface;
 
 /**
- * Namespace translation extractor
+ * Namespace translation extractor.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */
@@ -38,7 +38,7 @@ class NamespaceTranslationExtractor implements TranslationExtractorInterface
      * @param string $path
      * @param mixed  $value
      */
-    function unflatten(array &$arr, $path, $value)
+    public function unflatten(array &$arr, $path, $value)
     {
         $parts = explode('.', $path);
 
