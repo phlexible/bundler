@@ -1,12 +1,9 @@
 preset: symfony
 
-linting: true
-
 enabled:
-    - ordered_use
-    - strict
-    - no_spaces_after_function_name
+  - ordered_imports
+  - strict_comparison
 
 disabled:
-    - empty_return
-
+  - function_declaration
+  - simplified_null_return
