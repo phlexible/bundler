@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Tests\Content;
 
 use Phlexible\Component\Bundler\Content\ResourceContent;
-use Puli\Repository\Resource\FileResource;
+use Symfony\Component\Config\Resource\FileResource;
 
 /**
  * @covers \Phlexible\Component\Bundler\Content\ResourceContent
@@ -27,5 +27,13 @@ class ResourceContentTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame('foo', $mappedContent->getContent());
         $this->assertSame(array($resource), $mappedContent->getResources());
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error
+     */
+    public function testMappedContentX()
+    {
+        new ResourceContent('foo', array('x'));
     }
 }

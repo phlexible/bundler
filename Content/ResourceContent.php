@@ -37,7 +37,10 @@ class ResourceContent
     public function __construct($content, array $resources)
     {
         $this->content = $content;
-        $this->resources = $resources;
+
+        foreach ($resources as $resource) {
+            $this->addResource($resource);
+        }
     }
 
     /**
@@ -46,6 +49,14 @@ class ResourceContent
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @param ResourceInterface $resource
+     */
+    private function addResource(ResourceInterface $resource)
+    {
+        $this->resources[] = $resource;
     }
 
     /**
