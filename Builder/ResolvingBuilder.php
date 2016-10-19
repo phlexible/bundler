@@ -20,7 +20,7 @@ use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\ResourceResolver\ResourceResolverInterface;
 
 /**
- * Resolving builder
+ * Resolving builder.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -81,14 +81,14 @@ abstract class ResolvingBuilder
     }
 
     /**
-     * Get all javascripts for the given section
+     * Get all javascripts for the given section.
      *
      * @return \Phlexible\Component\Bundler\Asset\MappedAsset
      */
     public function build()
     {
-        $file = $this->cacheDir . '/' . $this->getFilename();
-        $mapFile = $file . '.map';
+        $file = $this->cacheDir.'/'.$this->getFilename();
+        $mapFile = $file.'.map';
 
         $cache = new PuliResourceCollectionCache($file, $this->isDebug());
 
@@ -109,7 +109,6 @@ abstract class ResolvingBuilder
             if (!$this->debug) {
                 $this->compressor->compressFile($file);
             }
-
         }
 
         return new MappedAsset($file, $mapFile);

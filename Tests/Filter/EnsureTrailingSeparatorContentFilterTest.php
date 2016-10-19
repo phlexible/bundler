@@ -22,7 +22,7 @@ class EnsureTrailingSeparatorContentFilterTest extends \PHPUnit_Framework_TestCa
     {
         $filter = new EnsureTrailingSeparatorContentFilter("\n");
 
-        $this->assertSame("hello world!\n", $filter->filter("hello world!"));
+        $this->assertSame("hello world!\n", $filter->filter('hello world!'));
         $this->assertSame("hello world!\n", $filter->filter("hello world!\n"));
     }
 }

@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\ResourceResolver;
 use Puli\Repository\Resource\FileResource;
 
 /**
- * Resource resolver interface
+ * Resource resolver interface.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

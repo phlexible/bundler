@@ -15,7 +15,7 @@ use Puli\Discovery\Api\EditableDiscovery;
 use Puli\Repository\Resource\FileResource;
 
 /**
- * Resource finder
+ * Resource finder.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

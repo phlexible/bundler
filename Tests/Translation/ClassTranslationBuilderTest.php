@@ -23,7 +23,7 @@ class ClassTranslationBuilderTest extends \PHPUnit_Framework_TestCase
         $builder = new ClassTranslationBuilder();
         $result = $builder->build(array('Phlexible.user.List' => array('title' => 'Users'), 'Phlexible.user.UserWindow' => array('userText' => 'User')), 'testDomain');
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 Ext.define("Ext.locale.testDomain.Phlexible.user.List", {
     "override": "Phlexible.user.List",
     "title": "Users"

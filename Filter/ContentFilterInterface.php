@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Filter;
 
 /**
- * Content filter interface
+ * Content filter interface.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

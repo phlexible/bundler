@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\Finder;
 use Puli\Repository\Resource\FileResource;
 
 /**
- * Resource finder interface
+ * Resource finder interface.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

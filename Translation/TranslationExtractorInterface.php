@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\Translation;
 use Symfony\Component\Translation\MessageCatalogueInterface;
 
 /**
- * Translation extractor interface
+ * Translation extractor interface.
  *
  * @author Stephan Wentz <swentz@brainbits.net>
  */

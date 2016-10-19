@@ -16,8 +16,8 @@ namespace Phlexible\Component\Bundler\SourceMap;
  *
  * @author bspot
  */
-class Base64VLQ {
-
+class Base64VLQ
+{
     const SHIFT = 5;
     const MASK = 0x1F; // == (1 << SHIFT) == 0b00011111
     const CONTINUATION_BIT = 0x20; // == (MASK - 1 ) == 0b00100000
@@ -42,7 +42,7 @@ class Base64VLQ {
      */
     public function encode($aValue)
     {
-        $encoded = "";
+        $encoded = '';
 
         $vlq = $this->toVLQSigned($aValue);
 
@@ -72,8 +72,8 @@ class Base64VLQ {
         $i = 0;
         do {
             $digit = $this->base64Decode($encoded[$i]);
-            $vlq |= ($digit & self::MASK) << ($i*self::SHIFT);
-            $i++;
+            $vlq |= ($digit & self::MASK) << ($i * self::SHIFT);
+            ++$i;
         } while ($digit & self::CONTINUATION_BIT);
 
         return $this->fromVLQSigned($vlq);
@@ -113,7 +113,7 @@ class Base64VLQ {
      */
     private function fromVLQSigned($aValue)
     {
-        return $aValue & 1 ? $this->zeroFill(~$aValue+2, 1) | (-1 - 0x7fffffff) : $this->zeroFill($aValue, 1);
+        return $aValue & 1 ? $this->zeroFill(~$aValue + 2, 1) | (-1 - 0x7fffffff) : $this->zeroFill($aValue, 1);
     }
 
     /**
@@ -126,7 +126,7 @@ class Base64VLQ {
      */
     private function zeroFill($a, $b)
     {
-        return ($a >= 0) ? ($a >> $b) : ($a >> $b) & (PHP_INT_MAX >> ($b-1));
+        return ($a >= 0) ? ($a >> $b) : ($a >> $b) & (PHP_INT_MAX >> ($b - 1));
     }
 
     /**
@@ -135,29 +135,33 @@ class Base64VLQ {
      * @param int $number
      *
      * @return string
+     *
      * @throws \Exception
      */
     private function base64Encode($number)
     {
         if ($number < 0 || $number > 63) {
-            throw new \Exception("Must be between 0 and 63: " . $number);
+            throw new \Exception('Must be between 0 and 63: '.$number);
         }
+
         return $this->intToChar[$number];
     }
 
     /**
-     * Decode single 6-bit digit from base64
+     * Decode single 6-bit digit from base64.
      *
      * @param string $char
      *
      * @return int
+     *
      * @throws \Exception
      */
     private function base64Decode($char)
     {
         if (!array_key_exists($char, $this->charToInt)) {
-            throw new \Exception("Not a valid base 64 digit: " . $char);
+            throw new \Exception('Not a valid base 64 digit: '.$char);
         }
+
         return $this->charToInt[$char];
     }
 }

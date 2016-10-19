@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\SourceMap;
 
 /**
- * Encode mappings
+ * Encode mappings.
  *
  * @author bspot
  */
@@ -51,7 +51,7 @@ class MappingEncoder
         $lastSrcCol = 0;
         foreach ($groupedMap as $destLine => $lineMappings) {
             while (++$lastDestLine < $destLine) {
-                $groupedMapEnc[] = ";";
+                $groupedMapEnc[] = ';';
             }
 
             $lineMapEnc = array();
@@ -74,11 +74,11 @@ class MappingEncoder
                 $lineMapEnc[] = $mEnc;
             }
 
-            $groupedMapEnc[] = implode(",", $lineMapEnc) . ";";
+            $groupedMapEnc[] = implode(',', $lineMapEnc).';';
         }
 
         $groupedMapEnc = implode($groupedMapEnc);
 
         return $groupedMapEnc;
     }
-};
+}

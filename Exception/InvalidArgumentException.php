@@ -12,11 +12,10 @@
 namespace Phlexible\Component\Bundler\Exception;
 
 /**
- * Invalid argument exception for the bundler package
+ * Invalid argument exception for the bundler package.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
 class InvalidArgumentException extends \InvalidArgumentException implements ExceptionInterface
 {
-
 }

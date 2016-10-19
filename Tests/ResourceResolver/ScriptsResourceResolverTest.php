@@ -12,8 +12,8 @@
 namespace Phlexible\Component\Bundler\Tests\ResourceResolver;
 
 use org\bovigo\vfs\vfsStream;
-use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\ResourceResolver\RequireScriptResourceResolver;
+use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Puli\Repository\Resource\FileResource;
 
 /**

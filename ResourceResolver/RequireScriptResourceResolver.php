@@ -15,7 +15,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Puli\Repository\Resource\FileResource;
 
 /**
- * Require script resource resolver
+ * Require script resource resolver.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
@@ -84,7 +84,8 @@ class RequireScriptResourceResolver implements ResourceResolverInterface
 
         $results = new ArrayCollection();
 
-        function addToResult($file, ArrayCollection $results, array $symbols) {
+        function addToResult($file, ArrayCollection $results, array $symbols)
+        {
             if (!empty($file->added)) {
                 return;
             }
@@ -101,7 +102,9 @@ class RequireScriptResourceResolver implements ResourceResolverInterface
             }
 
             $results->set($file->path, $file->resource);
-        };
+        }
+
+
 
         foreach ($entryPointFiles as $file) {
             addToResult($file, $results, $symbols);

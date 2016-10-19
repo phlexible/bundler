@@ -14,7 +14,7 @@ namespace Phlexible\Component\Bundler\Content;
 use Symfony\Component\Config\Resource\ResourceInterface;
 
 /**
- * Resource content
+ * Resource content.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

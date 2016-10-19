@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\Filter;
 
 /**
- * Line separator filter
+ * Line separator filter.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

@@ -12,7 +12,7 @@
 namespace Phlexible\Component\Bundler\ResourceResolver;
 
 /**
- * Add all resource resolver
+ * Add all resource resolver.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */

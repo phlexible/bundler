@@ -15,7 +15,7 @@ use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Compressor\SimpleCssCompressor;
 
 /**
- * Simple css compressor test
+ * Simple css compressor test.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  *
@@ -35,7 +35,7 @@ class SimpleCssCompressorTest extends \PHPUnit_Framework_TestCase
 
     private function createCss()
     {
-        return <<<EOF
+        return <<<'EOF'
 #some.test {
     background-color: #FFFFFF;
     /* test */
@@ -55,7 +55,7 @@ EOF;
         $css = $this->createCss();
 
         $stream = fopen('php://memory', 'r+');
-        fputs($stream, $css);
+        fwrite($stream, $css);
         rewind($stream);
 
         $compressed = stream_get_contents($this->compressor->compressStream($stream));
