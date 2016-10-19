@@ -57,7 +57,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
             new ResolvedResources(array(
                 new FileResource($jsFile->url(), $jsFile->path()),
             )),
-            function () {
+            function() {
                 return 'sanitizedPath';
             }
         );
@@ -84,7 +84,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
                 new FileResource($jsFile->url(), $jsFile->path()),
             )),
             null,
-            function () {
+            function() {
                 return 'PREFIX'.PHP_EOL;
             }
         );
@@ -112,7 +112,7 @@ class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
             )),
             null,
             null,
-            function () {
+            function() {
                 return 'FILTERED'.PHP_EOL;
             }
         );

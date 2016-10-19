@@ -31,7 +31,7 @@ class MappingEncoder
     /**
      * @param Mapping[] $mappings
      *
-     * @return array
+     * @return string
      */
     public function encode(array $mappings)
     {
@@ -77,7 +77,7 @@ class MappingEncoder
             $groupedMapEnc[] = implode(',', $lineMapEnc).';';
         }
 
-        $groupedMapEnc = implode($groupedMapEnc);
+        $groupedMapEnc = implode('', $groupedMapEnc);
 
         return $groupedMapEnc;
     }

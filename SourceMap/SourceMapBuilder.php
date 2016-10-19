@@ -60,7 +60,7 @@ class SourceMapBuilder
      */
     private function createSources()
     {
-        return array_map(function (SourceMapIndex $index) {
+        return array_map(function(SourceMapIndex $index) {
             return $index->getSource();
         }, $this->indexes);
     }
@@ -70,7 +70,7 @@ class SourceMapBuilder
      */
     private function createContents()
     {
-        return array_map(function (SourceMapIndex $index) {
+        return array_map(function(SourceMapIndex $index) {
             return $index->getContent();
         }, $this->indexes);
     }
