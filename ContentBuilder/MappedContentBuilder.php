@@ -13,6 +13,7 @@ namespace Phlexible\Component\Bundler\ContentBuilder;
 
 use Phlexible\Component\Bundler\Content\MappedContent;
 use Phlexible\Component\Bundler\Filter\ChainContentFilter;
+use Phlexible\Component\Bundler\Filter\ContentFilterInterface;
 use Phlexible\Component\Bundler\Filter\EnsureTrailingSeparatorContentFilter;
 use Phlexible\Component\Bundler\Filter\LineSeparatorContentFilter;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
@@ -26,6 +27,21 @@ use Phlexible\Component\Bundler\SourceMap\SourceMapBuilder;
 class MappedContentBuilder
 {
     /**
+     * @var ContentFilterInterface
+     */
+    private $filter;
+
+    /**
+     * MappedContentBuilder constructor.
+     *
+     * @param ContentFilterInterface $filter
+     */
+    public function __construct(ContentFilterInterface $filter)
+    {
+        $this->filter = $filter;
+    }
+
+    /**
      * @param string            $name
      * @param ResolvedResources $resources
      * @param callable          $sanitizePath
@@ -36,21 +52,16 @@ class MappedContentBuilder
      */
     public function build($name, ResolvedResources $resources, $sanitizePath = null, $prefixContent = null, $filterContent = null)
     {
-        $filter = new ChainContentFilter(array(
-            new LineSeparatorContentFilter(PHP_EOL),
-            new EnsureTrailingSeparatorContentFilter(PHP_EOL),
-        ));
-
         $line = 0;
         $content = '';
         if (is_callable($prefixContent)) {
-            $content .= $filter->filter($prefixContent($resources));
+            $content .= $this->filter->filter($prefixContent($resources));
             $line = substr_count($content, PHP_EOL) + 1;
         }
         $sourceMapBuilder = new SourceMapBuilder($name, $line);
 
         foreach ($resources->getResources() as $resource) {
-            $fileContent = $filter->filter($resource->getBody());
+            $fileContent = $this->filter->filter($resource->getBody());
             $content .= $fileContent;
 
             $path = $resource->getPath();

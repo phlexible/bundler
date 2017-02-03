@@ -83,7 +83,7 @@ abstract class ResolvingBuilder
     /**
      * Get all javascripts for the given section.
      *
-     * @return \Phlexible\Component\Bundler\Asset\MappedAsset
+     * @return MappedAsset
      */
     public function build()
     {
