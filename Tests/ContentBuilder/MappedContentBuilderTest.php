@@ -35,7 +35,7 @@ class MappedContentBuilderTest extends TestCase
     {
         $filter = $this->prophesize(ContentFilterInterface::class);
         $filter->filter(Argument::any())->will(function($arg) {
-            return $arg[0];
+            return $arg[0].PHP_EOL;
         });
 
         $this->builder = new MappedContentBuilder($filter->reveal());
@@ -105,9 +105,9 @@ class MappedContentBuilderTest extends TestCase
         );
 
         $expected = new MappedContent(
-            'PREFIX'.PHP_EOL.'console.log(123);'.PHP_EOL,
+            'PREFIX'.PHP_EOL.PHP_EOL.'console.log(123);'.PHP_EOL,
             (new SourceMap(
-                'test', '', array($jsFile->path()), array($jsFile->getContent().PHP_EOL), array(), ';AAAA;'
+                'test', '', array($jsFile->path()), array($jsFile->getContent().PHP_EOL), array(), ';;AAAA;'
             ))->toJson()
         );
 
