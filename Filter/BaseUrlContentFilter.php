@@ -45,7 +45,7 @@ class BaseUrlContentFilter implements ContentFilterInterface
     {
         $this->baseUrl = '/';
         if ($baseUrl && $baseUrl !== '/') {
-            $this->baseUrl = '/' . trim($baseUrl, '/') . '/';
+            $this->baseUrl = '/'.trim($baseUrl, '/').'/';
         }
     }
 
@@ -56,7 +56,7 @@ class BaseUrlContentFilter implements ContentFilterInterface
     {
         $this->basePath = '/';
         if ($basePath && $basePath !== '/') {
-            $this->basePath = '/' . trim($basePath, '/') . '/';
+            $this->basePath = '/'.trim($basePath, '/').'/';
         }
     }
 
