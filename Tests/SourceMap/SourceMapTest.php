@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\SourceMap;
 
 use Phlexible\Component\Bundler\SourceMap\SourceMap;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\SourceMap\SourceMap
  */
-class SourceMapTest extends \PHPUnit_Framework_TestCase
+class SourceMapTest extends TestCase
 {
     /**
      * @return string

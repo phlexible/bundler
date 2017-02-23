@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Filter;
 
 use Phlexible\Component\Bundler\Filter\EnsureTrailingSeparatorContentFilter;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Filter\EnsureTrailingSeparatorContentFilter
  */
-class EnsureTrailingSeparatorContentFilterTest extends \PHPUnit_Framework_TestCase
+class EnsureTrailingSeparatorContentFilterTest extends TestCase
 {
     public function testFilter()
     {

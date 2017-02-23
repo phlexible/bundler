@@ -13,6 +13,7 @@ namespace Phlexible\Component\Bundler\Tests\Compressor;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Compressor\SimpleCssCompressor;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Simple css compressor test.
@@ -21,7 +22,7 @@ use Phlexible\Component\Bundler\Compressor\SimpleCssCompressor;
  *
  * @covers \Phlexible\Component\Bundler\Compressor\SimpleCssCompressor
  */
-class SimpleCssCompressorTest extends \PHPUnit_Framework_TestCase
+class SimpleCssCompressorTest extends TestCase
 {
     /**
      * @var SimpleCssCompressor

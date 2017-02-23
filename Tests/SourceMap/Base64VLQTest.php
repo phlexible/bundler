@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\SourceMap;
 
 use Phlexible\Component\Bundler\SourceMap\Base64VLQ;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\SourceMap\Base64VLQ
  */
-class Base64VLQTest extends \PHPUnit_Framework_TestCase
+class Base64VLQTest extends TestCase
 {
     /**
      * @var Base64VLQ

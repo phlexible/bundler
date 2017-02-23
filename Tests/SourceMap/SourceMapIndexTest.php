@@ -13,11 +13,12 @@ namespace Phlexible\Component\Bundler\Tests\SourceMap;
 
 use Phlexible\Component\Bundler\SourceMap\Mapping;
 use Phlexible\Component\Bundler\SourceMap\SourceMapIndex;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\SourceMap\SourceMapIndex
  */
-class SourceMapIndexTest extends \PHPUnit_Framework_TestCase
+class SourceMapIndexTest extends TestCase
 {
     /**
      * @var SourceMapIndex

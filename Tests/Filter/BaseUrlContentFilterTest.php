@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Filter;
 
 use Phlexible\Component\Bundler\Filter\BaseUrlContentFilter;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Filter\BaseUrlContentFilter
  */
-class BaseUrlContentFilterTest extends \PHPUnit_Framework_TestCase
+class BaseUrlContentFilterTest extends TestCase
 {
     public function testFilterBasePath()
     {

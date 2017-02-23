@@ -13,12 +13,13 @@ namespace Phlexible\Component\Bundler\Tests\Asset\Cache;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Cache\PuliResourceCollectionCache;
+use PHPUnit\Framework\TestCase;
 use Puli\Repository\Resource\FileResource;
 
 /**
  * @covers \Phlexible\Component\Bundler\Cache\PuliResourceCollectionCache
  */
-class PuliResourceCollectionCacheTest extends \PHPUnit_Framework_TestCase
+class PuliResourceCollectionCacheTest extends TestCase
 {
     public function testIsFreshReturnsFalseForMissingFile()
     {

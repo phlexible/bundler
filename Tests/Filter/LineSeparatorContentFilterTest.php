@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Filter;
 
 use Phlexible\Component\Bundler\Filter\LineSeparatorContentFilter;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Filter\LineSeparatorContentFilter
  */
-class LineSeparatorContentFilterTest extends \PHPUnit_Framework_TestCase
+class LineSeparatorContentFilterTest extends TestCase
 {
     public function testFilterToLineFeed()
     {

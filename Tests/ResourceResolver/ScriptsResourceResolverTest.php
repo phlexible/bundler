@@ -14,12 +14,13 @@ namespace Phlexible\Component\Bundler\Tests\ResourceResolver;
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\ResourceResolver\RequireScriptResourceResolver;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
+use PHPUnit\Framework\TestCase;
 use Puli\Repository\Resource\FileResource;
 
 /**
  * @covers \Phlexible\Component\Bundler\ResourceResolver\RequireScriptResourceResolver
  */
-class ScriptsResourceResolverTest extends \PHPUnit_Framework_TestCase
+class ScriptsResourceResolverTest extends TestCase
 {
     public function testResolveResources()
     {

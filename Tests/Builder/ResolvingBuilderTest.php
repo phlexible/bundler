@@ -20,6 +20,7 @@ use Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder;
 use Phlexible\Component\Bundler\Finder\ResourceFinderInterface;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\ResourceResolver\ResourceResolverInterface;
+use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
 class TestBuilder extends ResolvingBuilder
@@ -47,7 +48,7 @@ class TestBuilder extends ResolvingBuilder
 /**
  * @covers \Phlexible\Component\Bundler\Builder\ResolvingBuilder
  */
-class ResolvingBuilderTest extends \PHPUnit_Framework_TestCase
+class ResolvingBuilderTest extends TestCase
 {
     public function testBuild()
     {

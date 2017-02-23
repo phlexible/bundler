@@ -12,12 +12,13 @@
 namespace Phlexible\Component\Bundler\Tests\Translation;
 
 use Phlexible\Component\Bundler\Translation\NamespaceTranslationExtractor;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Translation\MessageCatalogue;
 
 /**
  * @covers \Phlexible\Component\Bundler\Translation\NamespaceTranslationExtractor
  */
-class NamespaceTranslationExtractorTest extends \PHPUnit_Framework_TestCase
+class NamespaceTranslationExtractorTest extends TestCase
 {
     public function testExtract()
     {

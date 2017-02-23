@@ -13,11 +13,12 @@ namespace Phlexible\Component\Bundler\Tests\SourceMap;
 
 use Phlexible\Component\Bundler\SourceMap\Mapping;
 use Phlexible\Component\Bundler\SourceMap\MappingEncoder;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\SourceMap\MappingEncoder
  */
-class MappingEncoderTest extends \PHPUnit_Framework_TestCase
+class MappingEncoderTest extends TestCase
 {
     public function testEncode()
     {

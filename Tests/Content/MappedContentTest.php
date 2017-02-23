@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Content;
 
 use Phlexible\Component\Bundler\Content\MappedContent;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Content\MappedContent
  */
-class MappedContentTest extends \PHPUnit_Framework_TestCase
+class MappedContentTest extends TestCase
 {
     public function testMappedContent()
     {

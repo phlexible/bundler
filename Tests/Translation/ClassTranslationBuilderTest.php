@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Translation;
 
 use Phlexible\Component\Bundler\Translation\ClassTranslationBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Translation\ClassTranslationBuilder
  */
-class ClassTranslationBuilderTest extends \PHPUnit_Framework_TestCase
+class ClassTranslationBuilderTest extends TestCase
 {
     public function testExtract()
     {

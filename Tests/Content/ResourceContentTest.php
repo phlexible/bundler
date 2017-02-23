@@ -12,12 +12,13 @@
 namespace Phlexible\Component\Bundler\Tests\Content;
 
 use Phlexible\Component\Bundler\Content\ResourceContent;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Resource\FileResource;
 
 /**
  * @covers \Phlexible\Component\Bundler\Content\ResourceContent
  */
-class ResourceContentTest extends \PHPUnit_Framework_TestCase
+class ResourceContentTest extends TestCase
 {
     public function testMappedContent()
     {

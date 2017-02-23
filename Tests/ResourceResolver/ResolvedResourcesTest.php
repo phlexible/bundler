@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\ResourceResolver;
 
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\ResourceResolver\ResolvedResources
  */
-class ResolvedResourcesTest extends \PHPUnit_Framework_TestCase
+class ResolvedResourcesTest extends TestCase
 {
     public function testResolvedResources()
     {

@@ -13,11 +13,12 @@ namespace Phlexible\Component\Bundler\Tests\Filter;
 
 use Phlexible\Component\Bundler\Filter\ChainContentFilter;
 use Phlexible\Component\Bundler\Filter\ContentFilterInterface;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Filter\ChainContentFilter
  */
-class ChainContentFilterTest extends \PHPUnit_Framework_TestCase
+class ChainContentFilterTest extends TestCase
 {
     public function testFilterBasePath()
     {

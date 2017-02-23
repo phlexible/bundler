@@ -13,6 +13,7 @@ namespace Phlexible\Component\Bundler\Tests\Finder;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Finder\ResourceFinder;
+use PHPUnit\Framework\TestCase;
 use Puli\Discovery\Api\EditableDiscovery;
 use Puli\Discovery\Binding\ResourceBinding;
 use Puli\Repository\Resource\FileResource;
@@ -20,7 +21,7 @@ use Puli\Repository\Resource\FileResource;
 /**
  * @covers \Phlexible\Component\Bundler\Finder\ResourceFinder
  */
-class ResourceFinderTest extends \PHPUnit_Framework_TestCase
+class ResourceFinderTest extends TestCase
 {
     public function testFindByType()
     {

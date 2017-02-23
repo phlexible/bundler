@@ -16,12 +16,13 @@ use Phlexible\Component\Bundler\Content\MappedContent;
 use Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\SourceMap\SourceMap;
+use PHPUnit\Framework\TestCase;
 use Puli\Repository\Resource\FileResource;
 
 /**
  * @covers \Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder
  */
-class MappedContentBuilderTest extends \PHPUnit_Framework_TestCase
+class MappedContentBuilderTest extends TestCase
 {
     public function testBuildCreatedMappedContent()
     {

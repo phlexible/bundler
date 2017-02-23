@@ -12,11 +12,12 @@
 namespace Phlexible\Component\Bundler\Tests\Asset;
 
 use Phlexible\Component\Bundler\Asset\Asset;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \Phlexible\Component\Bundler\Asset\Asset
  */
-class AssetTest extends \PHPUnit_Framework_TestCase
+class AssetTest extends TestCase
 {
     public function testAsset()
     {
