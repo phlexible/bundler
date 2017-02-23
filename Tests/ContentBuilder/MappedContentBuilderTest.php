@@ -40,6 +40,7 @@ class MappedContentBuilderTest extends TestCase
 
         $this->builder = new MappedContentBuilder($filter->reveal());
     }
+    
     public function testBuildCreatedMappedContent()
     {
         $root = vfsStream::setup();
