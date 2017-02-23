@@ -104,8 +104,6 @@ class RequireScriptResourceResolver implements ResourceResolverInterface
             $results->set($file->path, $file->resource);
         }
 
-
-
         foreach ($entryPointFiles as $file) {
             addToResult($file, $results, $symbols);
         }

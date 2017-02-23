@@ -12,10 +12,7 @@
 namespace Phlexible\Component\Bundler\ContentBuilder;
 
 use Phlexible\Component\Bundler\Content\MappedContent;
-use Phlexible\Component\Bundler\Filter\ChainContentFilter;
 use Phlexible\Component\Bundler\Filter\ContentFilterInterface;
-use Phlexible\Component\Bundler\Filter\EnsureTrailingSeparatorContentFilter;
-use Phlexible\Component\Bundler\Filter\LineSeparatorContentFilter;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\SourceMap\SourceMapBuilder;
 
