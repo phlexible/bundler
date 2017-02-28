@@ -9,42 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Phlexible\Component\Bundler\Tests\Asset\Builder;
+namespace Phlexible\Component\Bundler\Tests\Builder;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Asset\MappedAsset;
-use Phlexible\Component\Bundler\Builder\ResolvingBuilder;
 use Phlexible\Component\Bundler\Compressor\CompressorInterface;
 use Phlexible\Component\Bundler\Content\MappedContent;
 use Phlexible\Component\Bundler\ContentBuilder\MappedContentBuilder;
 use Phlexible\Component\Bundler\Finder\ResourceFinderInterface;
 use Phlexible\Component\Bundler\ResourceResolver\ResolvedResources;
 use Phlexible\Component\Bundler\ResourceResolver\ResourceResolverInterface;
+use Phlexible\Component\Bundler\Tests\Fixture\TestBuilder;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
-class TestBuilder extends ResolvingBuilder
-{
-    protected function getFilename()
-    {
-        return 'test.txt';
-    }
-
-    protected function getType()
-    {
-        return 'test/test';
-    }
-
-    protected function sanitizePath($path)
-    {
-        return $path;
-    }
-
-    protected function prefixContent(ResolvedResources $resources)
-    {
-        return '';
-    }
-}
 /**
  * @covers \Phlexible\Component\Bundler\Builder\ResolvingBuilder
  */

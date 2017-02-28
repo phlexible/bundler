@@ -34,6 +34,11 @@ class SourceMapBuilder
     private $indexes = array();
 
     /**
+     * @var int
+     */
+    private $index = 0;
+
+    /**
      * @param string $file
      * @param int    $line
      */

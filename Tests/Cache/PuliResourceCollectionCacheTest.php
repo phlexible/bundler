@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Phlexible\Component\Bundler\Tests\Asset\Cache;
+namespace Phlexible\Component\Bundler\Tests\Cache;
 
 use org\bovigo\vfs\vfsStream;
 use Phlexible\Component\Bundler\Cache\PuliResourceCollectionCache;
