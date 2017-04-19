@@ -87,7 +87,7 @@ abstract class ResolvingBuilder
      */
     public function build()
     {
-        $file = $this->cacheDir.'/'.$this->getFilename();
+        $file = rtrim($this->cacheDir, '/').'/'.$this->getFilename();
         $mapFile = $file.'.map';
 
         $cache = new PuliResourceCollectionCache($file, $this->isDebug());
