@@ -10,32 +10,13 @@
  */
 
 namespace Phlexible\Component\Bundler\Asset;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Asset.
  *
  * @author Stephan Wentz <sw@brainbits.net>
  */
-class Asset
+class Asset extends File
 {
-    /**
-     * @var string
-     */
-    private $file;
-
-    /**
-     * @param string $file
-     */
-    public function __construct($file)
-    {
-        $this->file = $file;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFile()
-    {
-        return $this->file;
-    }
 }

@@ -37,8 +37,8 @@ class MappedAsset extends Asset
     /**
      * @return string
      */
-    public function getMapFile()
+    public function getMapAsset()
     {
-        return $this->mapFile;
+        return new Asset($this->mapFile);
     }
 }
