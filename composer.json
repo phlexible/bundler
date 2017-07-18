@@ -19,6 +19,7 @@
         "puli/repository": "^1.0",
         "symfony/config": "^2.8",
         "symfony/filesystem": "^2.8",
+        "symfony/http-foundation": "^2.8",
         "symfony/translation": "^2.8",
         "doctrine/collections": "^1.3"
     },

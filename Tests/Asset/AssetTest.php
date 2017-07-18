@@ -21,8 +21,8 @@ class AssetTest extends TestCase
 {
     public function testAsset()
     {
-        $asset = new Asset('foo');
+        $asset = new Asset(__FILE__);
 
-        $this->assertSame('foo', $asset->getFile());
+        $this->assertSame(__FILE__, $asset->getPathname());
     }
 }

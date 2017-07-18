@@ -11,6 +11,7 @@
 
 namespace Phlexible\Component\Bundler\Tests\Asset;
 
+use Phlexible\Component\Bundler\Asset\Asset;
 use Phlexible\Component\Bundler\Asset\MappedAsset;
 use PHPUnit\Framework\TestCase;
 
@@ -21,9 +22,10 @@ class MappedAssetTest extends TestCase
 {
     public function testAsset()
     {
-        $asset = new MappedAsset('foo', 'bar');
+        $asset = new MappedAsset(__FILE__, __FILE__);
 
-        $this->assertSame('foo', $asset->getFile());
-        $this->assertSame('bar', $asset->getMapFile());
+        $this->assertSame(__FILE__, $asset->getPathname());
+        $this->assertInstanceof(Asset::class, $asset->getMapAsset());
+        $this->assertSame(__FILE__, $asset->getMapAsset()->getPathname());
     }
 }
